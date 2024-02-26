@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
@@ -33,6 +35,8 @@ public class WebSecurityConfig {
                         .logoutUrl("/admin/logout")
                         .logoutSuccessUrl("/")
                         .permitAll())
+                        .headers(headers -> headers
+                        .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
                 .csrf(AbstractHttpConfigurer::disable);
         return http.build();
     }
