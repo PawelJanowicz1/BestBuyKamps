@@ -24,15 +24,15 @@ This project is built on Spring Boot.
 
 Menu page      |  Cart
 :------------------------:|:-------------------------:
-![Menu page](/static/demo_images/main_page.png)  |  ![Cart](/static/demo_images/cart_page.png)
+![Menu page](/static/images/main_page.png)  |  ![Cart](/static/images/cart_page.png)
 
 Checkout      |  Register page
 :------------------------:|:-------------------------:
-![Checkout](/static/demo_images/checkout_page.png)  |  ![Register page](/static/demo_images/register_page.png)
+![Checkout](/static/images/checkout_page.png)  |  ![Register page](/static/images/register_page.png)
 
 Login page      |  Order placed
 :------------------------:|:-------------------------:
-![Login page](/static/demo_images/login_page.png)  |  ![Order placed](/static/demo_images/order_placed.png)
+![Login page](/static/images/login_page.png)  |  ![Order placed](/static/images/order_placed.png)
 
 ## TODO
 
