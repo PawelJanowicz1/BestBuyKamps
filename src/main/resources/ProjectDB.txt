@@ -1,0 +1,139 @@
+db 
+
+ tabele : 
+	 
+	- user
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		String login,
+		String password,
+		String type ENUM('regular', 'admin'),
+		String name,
+		String surname,
+		String email UNIQUE,
+		String contact_phone,
+		LocalDate date_of_birth
+
+	- product
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		String name,
+		String category,
+		Double price,
+		Long discount_id NOT NULL,
+		FOREIGN KEY (discount_id) REFERENCES discount(id)
+
+	- warehouse
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		Long product_id NOT NULL,
+		Integer quantity,
+		FOREIGN KEY (product_id) REFERENCES product(id)
+
+	- cart
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		Long user_id,
+		FOREIGN KEY (user_id) REFERENCES user(id)
+
+	- cart_item
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		Long cart_id NOT NULL,
+		Long product_id NOT NULL,
+		Integer quantity NOT NULL,
+		FOREIGN KEY (cart_id) REFERENCES cart(id),
+		FOREIGN KEY (product_id) REFERENCES product(id)
+
+	- order
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		Long user_id NOT NULL,
+		String country,
+		String city,
+		String street,
+		String houseNumber,
+		String apartmentNumber,
+		String paymentMethod,
+		Double totalValue,
+		FOREIGN KEY (user_id) REFERENCES user(id)
+
+	- discount
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		String typeOfDiscount ENUM('percent', 'value') NOT NULL,
+		Double discount NOT NULL
+
+	- newsletter
+		Long id PRIMARY KEY AUTO_INCREMENT,
+		Long user_id,
+		String email NOT NULL,FOREIGN KEY (user_id) REFERENCES user(id)
+		
+		
+		---------------------------------SQL--------------------------------
+		
+CREATE DATABASE IF NOT EXISTS Shop;
+
+USE Shop;
+
+CREATE TABLE user (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    login VARCHAR(255),
+    password VARCHAR(255),
+    type ENUM('regular', 'admin'),
+    name VARCHAR(255),
+    surname VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
+    contact_phone VARCHAR(20),
+    date_of_birth DATE
+);
+
+CREATE TABLE discount (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    typeOfDiscount ENUM('percent', 'value') NOT NULL,
+    discount DOUBLE NOT NULL
+);
+
+CREATE TABLE product (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    category VARCHAR(255),
+    price DOUBLE,
+    discount_id BIGINT NOT NULL,
+    FOREIGN KEY (discount_id) REFERENCES discount(id)
+);
+
+CREATE TABLE warehouse (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    product_id BIGINT NOT NULL,
+    quantity INT,
+    FOREIGN KEY (product_id) REFERENCES product(id)
+);
+
+CREATE TABLE cart (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    user_id BIGINT,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+CREATE TABLE cart_item (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    cart_id BIGINT NOT NULL,
+    product_id BIGINT NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (cart_id) REFERENCES cart(id),
+    FOREIGN KEY (product_id) REFERENCES product(id)
+);
+
+CREATE TABLE orders (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    user_id BIGINT NOT NULL,
+    country VARCHAR(255),
+    city VARCHAR(255),
+    street VARCHAR(255),
+    houseNumber VARCHAR(10),
+    apartmentNumber VARCHAR(10),
+    paymentMethod VARCHAR(255),
+    totalValue DOUBLE,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+CREATE TABLE newsletter (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    user_id BIGINT,
+    email VARCHAR(255) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
