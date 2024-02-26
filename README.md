@@ -2,7 +2,7 @@
 
 This project is a web application built on Spring Boot, allowing users to browse and purchase games.
 
-## :key: Access Credentials:
+## :key: Access Credentials
 
 ### :man_technologist: Admin Access
 To log in as an admin:
