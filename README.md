@@ -1,7 +1,7 @@
 User
 # :video_game: BestBuyKamps
 
-This project is built on Spring Boot.
+This project is a web application built on Spring Boot, allowing users to browse and purchase games.
 
 ## Used Technologies:
 
