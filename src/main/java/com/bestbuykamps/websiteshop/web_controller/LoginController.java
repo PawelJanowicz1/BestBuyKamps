@@ -1,5 +1,4 @@
 package com.bestbuykamps.websiteshop.web_controller;
-
 import com.bestbuykamps.websiteshop.data_model.ContactDetails;
 import com.bestbuykamps.websiteshop.data_model.User;
 import org.slf4j.Logger;
@@ -9,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 @Controller
 @RequestMapping("/")
 public class LoginController {
@@ -44,11 +42,8 @@ public class LoginController {
         logger.info("City: {}", city);
         logger.info("ZIP Code: {}", zip);
 
-        //TODO: stworzenie instancji usera i zmapowanie danych na klasę User
         User user = new User(username, password);
         ContactDetails contactDetails = new ContactDetails();
-
         return "REGISTER_SUCCESS";
     }
-
 }

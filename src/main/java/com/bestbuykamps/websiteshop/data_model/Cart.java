@@ -1,10 +1,6 @@
 package com.bestbuykamps.websiteshop.data_model;
-
 import jakarta.persistence.*;
-
 import java.util.*;
-
-
 @Entity
 @Table(name = "cart")
 public class Cart {
@@ -25,14 +21,8 @@ public class Cart {
     @Column(name = "session_id")
     private String sessionId;
 
-
-    //konstruktor domyślny
     public Cart() {
     }
-
-    // gettery i settery
-
-
     public ContactDetails getContactDetails() {
         return contactDetails;
     }
@@ -78,7 +68,6 @@ public class Cart {
         this.userId = userId;
     }
 
-
     @Override
     public String toString() {
         return "Cart{" +
@@ -89,8 +78,6 @@ public class Cart {
                 ", sessionId='" + sessionId + '\'' +
                 '}';
     }
-
     public void setId(Long cartId) {
-
     }
 }

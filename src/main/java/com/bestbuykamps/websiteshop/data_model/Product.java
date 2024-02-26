@@ -1,7 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
-
 import jakarta.persistence.*;
-
 @Entity
 @Table(name ="product")
 public class Product {
@@ -96,14 +94,3 @@ public class Product {
                 '}';
     }
 }
-
-/*
-CREATE TABLE product (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    category VARCHAR(100),
-    price DOUBLE,
-    discount_id BIGINT NOT NULL,
-    FOREIGN KEY (discount_id) REFERENCES discount(id)
-);
- */

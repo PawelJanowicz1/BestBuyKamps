@@ -1,6 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
 import jakarta.persistence.*;
-
 @Entity
 @Table(name="users")
 public class User {
@@ -22,18 +21,13 @@ public class User {
     @JoinColumn(name = "contact_details_id", referencedColumnName = "id")
     private ContactDetails contactDetails;
 
-
-    //konstruktor domyślny
     public User() {
     }
-
-    // konstruktor 2argumentowy na potrzeby tworzenie logowania (Ania) - raczej do wymiany/usunięcia
     public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    //gettery i settery
     public Long getUserId() {
         return userId;
     }

@@ -1,9 +1,6 @@
 package com.bestbuykamps.websiteshop.data_model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-
-import java.util.Optional;
-
 @Entity
 @Table(name = "cart_item")
 public class CartItem {

@@ -1,6 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
 import jakarta.persistence.*;
-
 @Entity
 @Table(name = "warehouse")
 public class Warehouse {
@@ -18,8 +17,6 @@ public class Warehouse {
     public Warehouse() {
         //konstruktor domyślny
     }
-
-
 
     public Long getId() {
         return id;

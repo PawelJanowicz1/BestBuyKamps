@@ -4,8 +4,4 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class WarehouseService {
-
-    /// dane kontaktowe
-    // dane dostawy ,
-    //
 }

@@ -1,12 +1,9 @@
 package com.bestbuykamps.websiteshop.web_controller;
-
 import com.bestbuykamps.websiteshop.business_service.CartService;
 import com.bestbuykamps.websiteshop.business_service.ProductService;
-import com.bestbuykamps.websiteshop.data_model.Cart;
 import com.bestbuykamps.websiteshop.data_model.CartItem;
 import com.bestbuykamps.websiteshop.data_model.Product;
 import org.springframework.web.bind.annotation.*;
-
 import java.math.BigDecimal;
 import java.util.List;
 

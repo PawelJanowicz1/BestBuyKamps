@@ -1,9 +1,6 @@
 package com.bestbuykamps.websiteshop.web_controller;
-
-import com.bestbuykamps.websiteshop.business_service.CartService;
 import com.bestbuykamps.websiteshop.business_service.ContactDetailsService;
 import com.bestbuykamps.websiteshop.business_service.OrdersService;
-import com.bestbuykamps.websiteshop.data_model.OrderRepository;
 import com.bestbuykamps.websiteshop.util.SessionUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -11,24 +8,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 @Controller
 @RequestMapping("/checkout")
 public class CheckoutController {
-
     private final ContactDetailsService contactDetailsService;
     private final OrdersService ordersService;
     private final SessionUtil sessionUtil;
-
-
-
 
     public CheckoutController(ContactDetailsService contactDetailsService, OrdersService ordersService, SessionUtil sessionUtil) {
         this.contactDetailsService = contactDetailsService;
         this.ordersService = ordersService;
         this.sessionUtil = sessionUtil;
     }
-
     private static final Logger logger = LoggerFactory.getLogger(CheckoutController.class);
 
     @GetMapping()
@@ -65,11 +56,8 @@ public class CheckoutController {
 
         return "redirect:/confirmation";
     }
-
-
     public void showOrderConfirmation(Model model , String sessionId) {
         Long orderNumber = ordersService.getOrder(sessionId).getOrderNumber();
         model.addAttribute("orderNumber", orderNumber);
     }
-
 }

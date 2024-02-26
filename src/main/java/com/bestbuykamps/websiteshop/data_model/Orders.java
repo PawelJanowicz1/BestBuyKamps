@@ -1,6 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
 import jakarta.persistence.*;
-
 @Entity
 public class Orders {
 

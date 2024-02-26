@@ -1,12 +1,10 @@
 package com.bestbuykamps.websiteshop.util;
-
 import com.bestbuykamps.websiteshop.business_service.CartService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
 @Component
 public class SessionUtil {
     private final CartService cartService;

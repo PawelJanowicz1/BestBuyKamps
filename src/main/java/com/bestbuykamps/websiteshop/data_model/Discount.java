@@ -1,8 +1,6 @@
 package com.bestbuykamps.websiteshop.data_model;
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
-
 @Entity
 @Table(name = "discount")
 public class Discount {

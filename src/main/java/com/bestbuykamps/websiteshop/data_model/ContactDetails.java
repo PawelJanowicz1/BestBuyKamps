@@ -1,8 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
-
 import jakarta.persistence.*;
-import org.hibernate.validator.constraints.Length;
-
 @Entity
 @Table(name = "contact_details")
 public class ContactDetails {
@@ -81,8 +78,6 @@ public class ContactDetails {
     public void setAdress(String adress) {
         this.adress = adress;
     }
-
-
 
     public String getPostalCode() {
         return postalCode;

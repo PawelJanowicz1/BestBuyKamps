@@ -1,11 +1,9 @@
--- inserty dla zniżek
 INSERT INTO discount (type_of_discount, discount_value) VALUES
     ('PERCENT', 10.0);
 
 INSERT INTO discount (type_of_discount, discount_value) VALUES
     ('VALUE', 50.0);
 
--- Inserty dla produktów
 INSERT INTO product (name, category, price, discount_id, image_path) VALUES
     ('Call of duty Modern Warfare 3', 'Gry Komputerowe', 59.99, 1 , '/images/callofduty.jpg');
 
@@ -36,8 +34,6 @@ INSERT INTO product (name, category, price, discount_id,image_path) VALUES
 INSERT INTO product (name, category, price, discount_id,image_path) VALUES
     ('Oddworld Soulstorm Day One Oddition', 'Gry Komputerowe', 14.99, 2, '/images/soulstorm.jpg');
 
-
--- inserty dla warehouse
 INSERT INTO warehouse (product_id, quantity) VALUES (1, 50);
 INSERT INTO warehouse (product_id, quantity) VALUES (2, 20);
 INSERT INTO warehouse (product_id, quantity) VALUES (3, 75);
@@ -48,6 +44,4 @@ INSERT INTO warehouse (product_id, quantity) VALUES (7, 80);
 INSERT INTO warehouse (product_id, quantity) VALUES (8, 15);
 INSERT INTO warehouse (product_id, quantity) VALUES (9, 40);
 INSERT INTO warehouse (product_id, quantity) VALUES (10, 60);
-
--- INSERT INTO cart (user_id) VALUES (NULL);
 INSERT INTO users(username,password) VALUES ('Anna','password1');
