@@ -1,7 +1,7 @@
 User
 # :video_game: BestBuyKamps
 
-This project is built on Spring Boot.
+This project is a web application built on Spring Boot, allowing users to browse and purchase games.
 
 ## Used Technologies:
 
@@ -24,15 +24,15 @@ This project is built on Spring Boot.
 
 Menu page      |  Cart
 :------------------------:|:-------------------------:
-![Menu page](/static/images/main_page.png)  |  ![Cart](/static/images/cart_page.png)
+![Menu page](src/main/resources/static/images/main_page.png)  |  ![Cart](src/main/resources/static/images/cart_page.png)
 
 Checkout      |  Register page
 :------------------------:|:-------------------------:
-![Checkout](/static/images/checkout_page.png)  |  ![Register page](/static/images/register_page.png)
+![Checkout](src/main/resources/static/images/checkout_page.png)  |  ![Register page](src/main/resources/static/images/register_page.png)
 
 Login page      |  Order placed
 :------------------------:|:-------------------------:
-![Login page](/static/images/login_page.png)  |  ![Order placed](/static/images/order_placed.png)
+![Login page](src/main/resources/static/images/login_page.png)  |  ![Order placed](src/main/resources/static/images/order_placed.png)
 
 ## TODO
 
