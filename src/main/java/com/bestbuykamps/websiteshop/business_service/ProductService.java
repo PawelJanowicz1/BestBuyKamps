@@ -22,7 +22,6 @@ public class ProductService {
     }
     public void deleteProduct(Product product) {
         if(product==null) throw new RuntimeException("Product cannot be null");
-        // możnaby pewnie dodać jeszcze zabezpieczenie, gdy nie ma takiego w bazie
         this.productRepository.delete(product);
     }
 }

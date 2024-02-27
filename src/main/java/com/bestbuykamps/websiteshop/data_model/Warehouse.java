@@ -15,7 +15,6 @@ public class Warehouse {
     private Integer quantity;
 
     public Warehouse() {
-        //konstruktor domyślny
     }
 
     public Long getId() {

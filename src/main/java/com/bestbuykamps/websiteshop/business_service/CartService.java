@@ -43,7 +43,7 @@ public class CartService {
     }
     public void deleteProductFromCart(Long productId, Long cartId) {
         Optional<Cart> cart = cartRepository.findById(cartId);
-        boolean match = cart.get().getCartItems().stream().anyMatch(item -> item.getProduct().getId().equals(productId)); // zwraca boolean czy produkt jest w koszyku
+        boolean match = cart.get().getCartItems().stream().anyMatch(item -> item.getProduct().getId().equals(productId));
         if (match) {
             for (CartItem cartItem : cart.get().getCartItems()) {
                 if (cartItem.getProduct().getId().equals(productId)) {
@@ -60,7 +60,7 @@ public class CartService {
     }
     public void trashProductFromCart(Long productId, Long cartId) {
         Optional<Cart> cart = cartRepository.findById(cartId);
-        boolean match = cart.get().getCartItems().stream().anyMatch(item -> item.getProduct().getId().equals(productId)); // zwraca boolean czy produkt jest w koszyku
+        boolean match = cart.get().getCartItems().stream().anyMatch(item -> item.getProduct().getId().equals(productId));
         if (match) {
             for (CartItem cartItem : cart.get().getCartItems()) {
                 if (cartItem.getProduct().getId().equals(productId)) {

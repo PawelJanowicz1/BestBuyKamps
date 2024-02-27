@@ -23,7 +23,6 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(authorizationManagerRequestMatcherRegistry
                         -> authorizationManagerRequestMatcherRegistry
                         .requestMatchers(HttpMethod.GET, "/admin/panel").hasAuthority("ADMIN")
-                        // TODO: na dashboard.html z przyciskiem do wylogowania i tabela z lista zamówień
                         .anyRequest().permitAll())
                 .formLogin((form) -> form
                         .loginPage("/login")

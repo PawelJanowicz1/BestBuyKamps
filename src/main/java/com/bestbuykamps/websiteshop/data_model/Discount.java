@@ -14,9 +14,6 @@ public class Discount {
 
     @Column(name = "discount_value")
     private BigDecimal discount;
-
-    // Konstruktory, gettery, settery i inne metody
-
     public Long getId() {
         return id;
     }

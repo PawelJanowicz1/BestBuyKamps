@@ -37,16 +37,12 @@ public class ContactDetails {
     @JoinColumn(name = "cart_id")
     private Cart cart;
 
-
     @OneToOne(mappedBy = "contactDetails")
     @JoinColumn(name = "user_id")
     private User user;
 
-    //konstruktor domyślny
     public ContactDetails() {
     }
-
-    // gettery i settery
     public Long getId() {
         return id;
     }

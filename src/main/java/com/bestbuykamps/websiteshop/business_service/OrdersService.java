@@ -23,7 +23,7 @@ public class OrdersService {
     public void createNewOrder(String sessionId){
         Orders orders = new Orders();
         orders.setCartId(cartService.getCartIdBySessionId(sessionId));
-        orders.setUserId(null); // obecna opcja dla niezalogowanego użytkownika
+        orders.setUserId(null);
         orders.setSessionId(sessionId);
         orders.setOrderNumber(generateNewOrderNumber());
         orderRepository.save(orders);

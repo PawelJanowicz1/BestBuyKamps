@@ -14,7 +14,6 @@ private final OrderRepository orderRepository;
         this.orderRepository = orderRepository;
     }
 
-    //TODO: sprawdzić czy potrzebne przerobić na redirect do strony głównej
     @GetMapping("confirmation")
     public String showOrderConfirmation(Model model) {
         Random random = new Random();

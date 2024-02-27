@@ -25,7 +25,6 @@ public class Product {
     private String imagePath;
 
     public Product() {
-        // Pusty konstruktor dla JPA
     }
 
     public Product(String name, String category, Double price) {

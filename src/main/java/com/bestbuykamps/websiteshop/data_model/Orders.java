@@ -27,8 +27,6 @@ public class Orders {
         this.userId = userId;
         this.orderNumber=orderNumber;
     }
-
-    // Gettery i Settery
     public Long getId() {
         return id;
     }
