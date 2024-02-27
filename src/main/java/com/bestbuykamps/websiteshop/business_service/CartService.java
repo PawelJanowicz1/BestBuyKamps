@@ -1,14 +1,13 @@
 package com.bestbuykamps.websiteshop.business_service;
 import com.bestbuykamps.websiteshop.data_model.*;
-import com.bestbuykamps.websiteshop.data_model.CartItemRepository;
-import com.bestbuykamps.websiteshop.data_model.CartRepository;
-import com.bestbuykamps.websiteshop.data_model.ProductRepository;
+import com.bestbuykamps.websiteshop.repository.CartItemRepository;
+import com.bestbuykamps.websiteshop.repository.CartRepository;
+import com.bestbuykamps.websiteshop.repository.ProductRepository;
 import com.bestbuykamps.websiteshop.web_controller.CheckoutController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

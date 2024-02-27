@@ -1,5 +1,8 @@
 package com.bestbuykamps.websiteshop.business_service;
 import com.bestbuykamps.websiteshop.data_model.*;
+import com.bestbuykamps.websiteshop.repository.CartRepository;
+import com.bestbuykamps.websiteshop.repository.OrderRepository;
+import com.bestbuykamps.websiteshop.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

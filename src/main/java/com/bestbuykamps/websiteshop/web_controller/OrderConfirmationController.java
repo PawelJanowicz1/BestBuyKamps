@@ -1,5 +1,5 @@
 package com.bestbuykamps.websiteshop.web_controller;
-import com.bestbuykamps.websiteshop.data_model.OrderRepository;
+import com.bestbuykamps.websiteshop.repository.OrderRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
