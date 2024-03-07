@@ -46,9 +46,4 @@ public class OrdersService {
     public Long getOrderNumber(){
         return lastOrderNumber;
     }
-//    public Long generateNewOrderNumber(){
-//        Random random = new Random();
-//        Long orderNumber = random.nextLong(1000000);
-//        return orderNumber;
-//    }
 }
