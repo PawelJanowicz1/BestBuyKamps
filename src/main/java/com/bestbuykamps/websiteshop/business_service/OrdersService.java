@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Random;
 @Service
 public class OrdersService {
+    private Long lastOrderNumber;
     private final CartRepository cartRepository;
     private final UserRepository userRepository;
     private final OrderRepository orderRepository;
@@ -21,11 +22,13 @@ public class OrdersService {
         this.cartService = cartService;
     }
     public void createNewOrder(String sessionId){
+        Random random = new Random();
+        lastOrderNumber = random.nextLong(1000000);
         Orders orders = new Orders();
         orders.setCartId(cartService.getCartIdBySessionId(sessionId));
         orders.setUserId(null);
         orders.setSessionId(sessionId);
-        orders.setOrderNumber(generateNewOrderNumber());
+        orders.setOrderNumber(lastOrderNumber);
         orderRepository.save(orders);
         String orderPlaced = "Order Placed";
         cartService.getCart(sessionId).setSessionId(orderPlaced);
@@ -40,9 +43,12 @@ public class OrdersService {
         }
         return new Orders();
     }
-    public Long generateNewOrderNumber(){
-        Random random = new Random();
-        Long orderNumber = random.nextLong(1000000);
-        return orderNumber;
+    public Long getOrderNumber(){
+        return lastOrderNumber;
     }
+//    public Long generateNewOrderNumber(){
+//        Random random = new Random();
+//        Long orderNumber = random.nextLong(1000000);
+//        return orderNumber;
+//    }
 }

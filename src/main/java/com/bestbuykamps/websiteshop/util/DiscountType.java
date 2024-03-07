@@ -1,4 +1,4 @@
-package com.bestbuykamps.websiteshop.data_model;
+package com.bestbuykamps.websiteshop.util;
 public enum DiscountType {
     PERCENT,
     VALUE

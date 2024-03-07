@@ -1,4 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
+import com.bestbuykamps.websiteshop.util.DiscountType;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 @Entity

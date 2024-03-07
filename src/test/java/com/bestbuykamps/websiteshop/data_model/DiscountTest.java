@@ -1,4 +1,5 @@
 package com.bestbuykamps.websiteshop.data_model;
+import com.bestbuykamps.websiteshop.util.DiscountType;
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import static org.junit.jupiter.api.Assertions.*;
