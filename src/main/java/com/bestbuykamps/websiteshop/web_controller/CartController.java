@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CartController {
     private final CartService cartService;
     private final SessionUtil sessionUtil;
-    private Long productId;
     private static final Logger logger = LoggerFactory.getLogger(CartController.class);
 
     public CartController(CartService cartService, SessionUtil sessionUtil) {
