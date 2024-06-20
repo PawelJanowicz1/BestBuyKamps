@@ -1,6 +1,20 @@
-# :video_game: BestBuyKamps
+## :bookmark_tabs: About This Project
+* Users can register/login.
+* Users can browse through the main pages, view games, or select a game from a storefront and preview.
+* Users can add games to the shopping cart and delete games from the shopping cart.
+* Users can order the games in the shopping cart.
+* Users can change their password and view their orders.
 
-This project is a web application built on Spring Boot, allowing users to browse and purchase games.
+## :hammer_and_wrench: Used Technologies
+
+* Spring (Boot, Data, Security)
+* JPA / Hibernate
+* H2
+* Thymeleaf
+* Bootstrap, CSS
+* Maven
+* Junit
+* Lombok
 
 ## :key: Access Credentials
 
@@ -13,24 +27,6 @@ To log in as an admin:
 To access the H2 console:
 - **Username:** admin
 - **No password required**
-
-## Used Technologies:
-
-* Spring (Boot, Data, Security)
-* JPA / Hibernate
-* H2
-* Thymeleaf
-* Bootstrap, CSS
-* Maven
-* Junit
-* Lombok
-
-## :bookmark_tabs: About This Project
-* Users can register/login.
-* Users can browse through the main pages, view games, or select a game from a storefront and preview.
-* Users can add games to the shopping cart and delete games from the shopping cart.
-* Users can order the games in the shopping cart.
-* Users can change their password and view their orders.
 
 ## :camera: Screenshots
 
