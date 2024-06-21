@@ -41,10 +41,3 @@ Checkout      |  Register page
 Login page      |  Order placed
 :------------------------:|:-------------------------:
 ![Login page](src/main/resources/static/images/login_page.png)  |  ![Order placed](src/main/resources/static/images/order_placed.png)
-
-## :clipboard: TODO
-
-* Users can search for games according to specified criteria.
-* Users can change their password and view their orders.
-* Admins can add or modify games.
-* Admins can view orders of all users.
