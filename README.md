@@ -11,7 +11,7 @@
 * JPA / Hibernate
 * H2
 * Thymeleaf
-* Bootstrap, CSS
+* CSS, Bootstrap
 * Maven
 * Junit
 * Lombok
