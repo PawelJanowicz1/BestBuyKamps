@@ -30,14 +30,14 @@ To access the H2 console:
 
 ## :camera: Screenshots
 
-Menu page      |  Cart
+Landing page      |  Cart page
 :------------------------:|:-------------------------:
 ![Menu page](src/main/resources/static/images/main_page.png)  |  ![Cart](src/main/resources/static/images/cart_page.png)
 
-Checkout      |  Register page
+Checkout page     |  Register page
 :------------------------:|:-------------------------:
 ![Checkout](src/main/resources/static/images/checkout_page.png)  |  ![Register page](src/main/resources/static/images/register_page.png)
 
-Login page      |  Order placed
+Login page      |  Order confirmation page
 :------------------------:|:-------------------------:
 ![Login page](src/main/resources/static/images/login_page.png)  |  ![Order placed](src/main/resources/static/images/order_placed.png)
